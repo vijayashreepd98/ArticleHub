@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import RouteData from "./global/routes";
+import { ArticleContextProvider } from "./context/ContextProvider";
+import ArticleList from "./pages/ArticleList";
 
 function App() {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ArticleContextProvider>
+        <Routes>
+          {RouteData.map(({ path, page }) => {
+            return <Route path={path} Component={page} key={path} />;
+          })}
+                      <Route path={"path"} Component={ArticleList} key={"path"} />;
+
+        </Routes>
+      </ArticleContextProvider>
+    </Router>
   );
 }
 
