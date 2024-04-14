@@ -66,7 +66,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Enhanced User Experience with CSS Transitions
 1. Implemented CSS transitions to create smooth animations when navigating between different routes or interacting with UI elements.
-2. Used CSS transitions to improve the loading experience by adding loading spinners or fade-in effects for content.
 
 ## Utilized React Hooks for State and Side Effects
 1. Used custom React hooks to encapsulate and reuse logic across multiple components, promoting code reusability and maintainability.

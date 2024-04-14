@@ -5,8 +5,6 @@ const MainContainer = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
 `;
 
 const PageHeader = styled.header`
