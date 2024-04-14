@@ -44,3 +44,33 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+###################################
+## Create routes using React Browser router
+1. **Route 1: "/"** - list out all the articles.
+2. **Route 2: "/articleDetail/:id"** - display the article detail, where id represents the id of the article to which we want to view the detail.
+
+## Created Context API for state management
+1. API Response is stored using React Context API to maintain the same state throughout the application.
+2. It will reduce the performance delay.
+3. Here we have used 2 APIs:
+   - a. [List Articles API](https://ps-dev-1-partnergateway.patientsky.dev/assignment/articles/) - to list out all articles. This API is called only once as we have only reading of content from the API. There is no write operation.
+   - b. [Article Detail API](https://ps-dev-1-partnergateway.patientsky.dev/assignment/articles/1) - to get the details of the article whose id is 1. This API is called when the user clicks on the view more button in a particular article card.
+
+4. Displaying proper error messages to the user when a particular API fails to return data, due to network or backend issues. By doing this, the user will get to know what is happening in the backend. This is handled by properly managing the errors in async function calls.
+
+## Implemented Component Lifecycle Methods
+1. Utilized `useEffect` hook to fetch data from APIs when the component mounts and performs necessary cleanup when the component unmounts.
+2. Leveraged `useState` hook to manage component state and update the UI dynamically based on user interactions or API responses.
+
+### Enhanced User Experience with CSS Transitions
+1. Implemented CSS transitions to create smooth animations when navigating between different routes or interacting with UI elements.
+2. Used CSS transitions to improve the loading experience by adding loading spinners or fade-in effects for content.
+
+## Utilized React Hooks for State and Side Effects
+1. Used custom React hooks to encapsulate and reuse logic across multiple components, promoting code reusability and maintainability.
+2. Leveraged `context API`  to manage  state logic .
+
+### Issue Faced
+1. Sometimes API returns errors - it's an API-related issue. UI-related changes have been done to inform the user about what's happening in the background.
