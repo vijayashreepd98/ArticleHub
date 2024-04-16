@@ -91,7 +91,6 @@ const ArticleHeader = styled.h2`
   text-shadow: 1px 0.5px 1px #787878;
   @media screen and (max-width: 450px) {
     font-size: 1.2rem;
-    background-color: red;
   }
 `;
 
@@ -118,7 +117,6 @@ const BackButton = styled.div`
 
   @media screen and (max-width: 450px) {
     font-size: 1.4rem;
-    background-color: red;
   }
 `;
 
@@ -134,7 +132,6 @@ const ArticleDescription = styled.p`
   text-shadow: 1px 0px 1px #bcced0;
   @media screen and (max-width: 450px) {
     font-size: 1.1rem;
-    background-color: red;
   }
 `;
 
