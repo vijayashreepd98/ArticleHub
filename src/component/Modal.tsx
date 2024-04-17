@@ -1,19 +1,20 @@
 import styled from "styled-components";
-import { ModalHeaderProps, ModalProps } from '../global/interface'
+import { ModalHeaderProps, ModalProps } from "../global/interface";
 
-export default function Modal({
-    header,
-    description,
-    isError = false,
-}: ModalProps) {
-    return (
-        <ModalContainer>
-            <ModalHeader color={isError ? "#FF0000" : "OOOOOO"}>{header}</ModalHeader>
-            <ModalDescription>{description}</ModalDescription>
-        </ModalContainer>
-    );
-}
+const Modal: React.FC<ModalProps> = ({
+  header,
+  description,
+  isError = false,
+}) => {
+  return (
+    <ModalContainer>
+      <ModalHeader color={isError ? "#FF0000" : "OOOOOO"}>{header}</ModalHeader>
+      <ModalDescription>{description}</ModalDescription>
+    </ModalContainer>
+  );
+};
 
+export default Modal;
 
 const ModalContainer = styled.div`
   width: min(100%, 350px);

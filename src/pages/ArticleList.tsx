@@ -11,7 +11,7 @@ import Loading from "../component/Loading";
 import { ArticleContext } from "../context/ContextData";
 import { useNavigate } from "react-router-dom";
 
-function ArticleList() {
+const ArticleList: React.FC = () => {
   const { articleList, isLoading, hasError, setArticleViewId } =
     useContext(ArticleContext);
   const navigate = useNavigate();
@@ -52,6 +52,6 @@ function ArticleList() {
       </PageContent>
     </MainContainer>
   );
-}
+};
 
 export default React.memo(ArticleList);

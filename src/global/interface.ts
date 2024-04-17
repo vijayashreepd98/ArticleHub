@@ -27,3 +27,12 @@ export interface ModalHeaderProps {
     description: string;
     isError?: boolean;
   }
+
+  export interface RouteProps {
+    [key:string]:RouteDataProps;
+  }
+
+  export interface RouteDataProps {
+    path:string;
+    page:React.FC;
+  }

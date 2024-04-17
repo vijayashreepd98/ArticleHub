@@ -8,7 +8,7 @@ import Loading from "../component/Loading";
 import Modal from "../component/Modal";
 import { ArticleContext } from "../context/ContextData";
 
-function ArticleDetail() {
+const ArticleDetail: React.FC = () => {
   const {
     articleViewId,
     setArticleViewId,
@@ -59,7 +59,7 @@ function ArticleDetail() {
       </PageContent>
     </MainContainer>
   );
-}
+};
 const MainContainer = styled.div`
   width: 100%;
   height: 100vh;

@@ -7,7 +7,9 @@ import {
   HasErrorProps,
 } from "../global/interface";
 
-function ArticleContextProvider({ children }: { children: JSX.Element }) {
+const ArticleContextProvider: React.FC<{ children: JSX.Element }> = ({
+  children,
+}) => {
   const [articleList, setArticleList] = useState<Array<ArticleProps>>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [hasError, setHasError] = useState<HasErrorProps>({
@@ -73,6 +75,6 @@ function ArticleContextProvider({ children }: { children: JSX.Element }) {
       {children}
     </ArticleContext.Provider>
   );
-}
+};
 
 export { ArticleContextProvider };

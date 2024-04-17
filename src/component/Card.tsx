@@ -8,12 +8,12 @@ interface CardProps {
   onViewMore?: (id: number) => void;
 }
 
-export default function Card({
+const Card: React.FC<CardProps> = ({
   id,
   title,
   summary,
   onViewMore = () => {},
-}: CardProps) {
+}) => {
   return (
     <CardContainer key={id}>
       <CardTitle>{title}</CardTitle>
@@ -31,8 +31,9 @@ export default function Card({
       </CardDiscription>
     </CardContainer>
   );
-}
+};
 
+export default Card;
 const CardContainer = styled.article`
   width: min(100%, 320px);
   height: fit-content;
@@ -74,14 +75,12 @@ const CardDiscription = styled.p`
 `;
 
 const ReadMoreContainer = styled.span`
-  position: absolute;
-  bottom: 0.3rem;
-  right: 0.2rem;
+  position: relative;
   z-index: 1;
+  float: right;
   cursor: pointer;
   color: #b6d0cd;
   background-color: #ffffff;
-  padding-left: 0.5rem;
   &:hover {
     color: hsla(182, 57%, 75%, 0.984);
   }

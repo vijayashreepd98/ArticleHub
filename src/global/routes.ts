@@ -1,7 +1,8 @@
 import ArticleDetail from "../pages/ArticleDetail";
 import ArticleList from "../pages/ArticleList";
+import { RouteDataProps } from "./interface";
 
-const RouteData = [
+const RouteData:Array<RouteDataProps> = [
   {
     path: "/",
     page: ArticleList,
